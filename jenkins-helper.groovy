@@ -13,9 +13,9 @@ def call() {
 
 			actions.each { action ->
 				echo "The action: ${action}"
-				// if (action?.parameters) {
-				// 	echo "Action Parameters: ${action?.parameters}"
-				// }
+				if (action?.parameters) {
+					echo "Action Parameters: ${action?.parameters}"
+				}
 				echo "The var: ${SOME_VAR}"
 			}
 		}
