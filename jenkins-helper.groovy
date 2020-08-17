@@ -13,7 +13,6 @@ def call() {
 
 			actions.each { action ->
 				echo "The action: ${action}"
-				echo "The var: ${SOME_VAR}"
 			}
 		}
 	}
