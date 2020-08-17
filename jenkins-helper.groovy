@@ -8,7 +8,7 @@ def call() {
 			def buildName = build.getDisplayName()
 			echo "Examining build: ${buildName}"
 			def actions = build.actions
-			action.each { action ->
+			actions.each { action ->
 				echo "The action: ${action}"
 			}
 		}
