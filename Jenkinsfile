@@ -10,6 +10,7 @@ pipeline {
 			steps {
 				script {
 					def helper = load './jenkins-helper.groovy'
+					def SOME_VAR = 'hello'
 					helper()
 				}
 			}
