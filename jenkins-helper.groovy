@@ -3,7 +3,7 @@ def call() {
 	def job = Jenkins.instance.getItemByFullName(currentBuild.projectName)
 	if (job != null) {
 		echo "Found the job! ${currentBuild.projectName}"
-		def builds = job.getBuilds().byTimestamp(new Date(0).getTime(), new Date().minus(1).getTime())
+		def builds = job.getBuilds()
 		echo "Number of builds: ${builds}"
 		builds.each { build ->
 			def buildName = build.getDisplayName()
