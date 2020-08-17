@@ -9,8 +9,15 @@ pipeline {
 		stage('Build') {
 			steps {
 				script {
+					sh """
+						echo "Artifact1" > artifact1.txt
+						echo "Artifact2" > artifact2.txt
+						echo "Artifact-${BUILD_NUMBER}" > artifact-${BUILD_NUMBER}.txt
+					"""
+				}
+				archiveArtifacts artifacts: 'Artifact*.txt', fingerprint: true, onlyIfSuccessful: true
+				script {
 					def helper = load './jenkins-helper.groovy'
-					def SOME_VAR = 'hello'
 					helper()
 				}
 			}
