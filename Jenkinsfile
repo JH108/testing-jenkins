@@ -15,7 +15,7 @@ pipeline {
 						echo "Artifact-${BUILD_NUMBER}" > artifact-${BUILD_NUMBER}.txt
 					"""
 				}
-				archiveArtifacts artifacts: 'Artifact*.txt', fingerprint: true, onlyIfSuccessful: true
+				archiveArtifacts artifacts: '*.txt', fingerprint: true, onlyIfSuccessful: true
 				script {
 					def helper = load './jenkins-helper.groovy'
 					helper()
