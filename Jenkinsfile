@@ -8,7 +8,6 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'yarn install'
 				script {
 					def helper = load './jenkins-helper.groovy'
 					helper()
