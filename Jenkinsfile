@@ -9,7 +9,7 @@ pipeline {
 		stage('Build - Dev') {
 			steps {
 				sh """
-					echo "build/dev/Artifact-${BUILD_NUMBER}" > artifact-${BUILD_NUMBER}.txt
+					echo "build/dev/Artifact-${BUILD_NUMBER}" > build/dev/artifact-${BUILD_NUMBER}.txt
 				"""
 				script {
 					def helper = load './jenkins-helper.groovy'
@@ -20,7 +20,7 @@ pipeline {
 		stage('Build - Master') {
 			steps {
 				sh """
-					echo "build/master/Artifact-${BUILD_NUMBER}" > artifact-${BUILD_NUMBER}.txt
+					echo "build/master/Artifact-${BUILD_NUMBER}" > build/master/artifact-${BUILD_NUMBER}.txt
 				"""
 				script {
 					def helper = load './jenkins-helper.groovy'
