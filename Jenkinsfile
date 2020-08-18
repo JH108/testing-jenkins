@@ -9,6 +9,7 @@ pipeline {
 		stage('Build - Dev') {
 			steps {
 				sh """
+					mkdir -p build/dev
 					echo "build/dev/Artifact-${BUILD_NUMBER}" > build/dev/artifact-${BUILD_NUMBER}.txt
 				"""
 				script {
@@ -20,6 +21,7 @@ pipeline {
 		stage('Build - Master') {
 			steps {
 				sh """
+					mkdir -p build/master
 					echo "build/master/Artifact-${BUILD_NUMBER}" > build/master/artifact-${BUILD_NUMBER}.txt
 				"""
 				script {
