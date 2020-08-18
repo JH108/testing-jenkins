@@ -5,17 +5,16 @@ def call(Sring branch, String anotherVariable) {
 	if (job != null) {
 		echo "Found the job! ${currentBuild.projectName}"
 		def builds = job.getBuilds()
-		echo "Number of builds: ${builds}"
 		builds.each { build ->
 			def buildName = build.getDisplayName()
 			echo "Examining build: ${buildName}"
 			def artifacts = build.getArtifacts()
 			echo "Artifacts for build: ${buildName} -> ${artifacts}"
-			def actions = build.actions
+			// def actions = build.actions
 
-			actions.each { action ->
-				echo "The action: ${action}"
-			}
+			// actions.each { action ->
+			// 	echo "The action: ${action}"
+			// }
 		}
 	}
 }
