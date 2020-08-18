@@ -7,9 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postmerge": "echo \"I merged some code!\""
   },
   "dependencies": {
+    "husky": "^4.2.5",
     "react": "16.13.1",
     "react-native": "0.63.2"
   },
