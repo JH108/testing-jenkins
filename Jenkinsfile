@@ -26,6 +26,7 @@ pipeline {
 					def helper = load './jenkins-helper.groovy'
 					helper('master', 'second')
 				}
+			}
 		}
 	}
 }
