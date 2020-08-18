@@ -27,5 +27,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "husky": {
+    "hooks": {
+      "post-merge": "echo 'hey there!'"
+    }
   }
 }
