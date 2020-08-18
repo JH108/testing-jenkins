@@ -1,4 +1,4 @@
-def call(Sring branch, String anotherVariable) {
+def call(String branch, String anotherVariable) {
 	echo "Called the helper with branch = ${branch} and ${anotherVariable}!"
 	archiveArtifacts artifacts: "build/${branch}/*.txt", fingerprint: true, onlyIfSuccessful: true
 	def job = Jenkins.instance.getItemByFullName(currentBuild.projectName)
