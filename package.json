@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "post-merge": "echo 'hey there!'"
+      "post-merge": "echo 'hey there! From Stage!'"
     }
   }
 }
