@@ -1,4 +1,3 @@
-def helper = load './jenkins-helper.groovy'
 pipeline {
 	agent {
 		docker {
@@ -13,7 +12,7 @@ pipeline {
 					echo "build/dev/Artifact-${BUILD_NUMBER}" > build/dev/artifact-${BUILD_NUMBER}.txt
 				"""
 				script {
-					// def helper = load './jenkins-helper.groovy'
+					def helper = load './jenkins-helper.groovy'
 					helper('dev', 'first')
 				}
 			}
