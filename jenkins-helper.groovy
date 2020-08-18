@@ -10,11 +10,6 @@ def call(Sring branch, String anotherVariable) {
 			echo "Examining build: ${buildName}"
 			def artifacts = build.getArtifacts()
 			echo "Artifacts for build: ${buildName} -> ${artifacts}"
-			// def actions = build.actions
-
-			// actions.each { action ->
-			// 	echo "The action: ${action}"
-			// }
 		}
 	}
 }
