@@ -8,6 +8,7 @@ pipeline {
 	stages {
 		stage('Build - Dev') {
 			steps {
+				sh "printenv"
 				sh """
 					mkdir -p build/dev
 					echo "build/dev/Artifact-${BUILD_NUMBER}" > build/dev/artifact-${BUILD_NUMBER}.txt
@@ -25,7 +26,7 @@ pipeline {
 					echo "build/master/Artifact-${BUILD_NUMBER}" > build/master/artifact-${BUILD_NUMBER}.txt
 				"""
 				script {
-					// def helper = load './jenkins-helper.groovy'
+					def helper = load './jenkins-helper.groovy'
 					helper('master', 'second')
 				}
 			}
