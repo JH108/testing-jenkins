@@ -1,5 +1,7 @@
 def call(String branch, String anotherVariable) {
 	echo "Called the helper with branch = ${branch} and ${anotherVariable}!"
+	sh "ls -la"
+	sh "ls -la ${branch}"
 	archiveArtifacts artifacts: "build/${branch}/*.txt", fingerprint: true, onlyIfSuccessful: true
 	def job = Jenkins.instance.getItemByFullName(currentBuild.projectName)
 	if (job != null) {
